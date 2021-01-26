@@ -1,0 +1,48 @@
+﻿{
+  "short_name": "PWA",
+  "name": "Projekt końcowy PWA",
+  "description": "Semestralny projekt Progressive Web App",
+  "icons": [
+    {
+      "src": "images/logo16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "images/logo32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "images/logo64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "images/logo128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "images/logo256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "images/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "images/logo1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#FACACA",
+  "theme_color": "#F91077",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "./"
+}
