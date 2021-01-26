@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<title>Kulki i sensory</title>
+	<title>Out of touch</title>
     <link rel="manifest" href="manifest.json"> 
 		<style>
 		.obraz{
@@ -16,69 +16,19 @@
 		</style>
 	</head>
 	<body>
+	<textarea id="notatki" name="notatki" rows="20" cols="30">
+	
+	</textarea>
 		<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register("serviceWorker.js").then(function () {
-            console.log('Service worker zainstalowany!')
-        }).catch(function (err) {
-            console.log('Service worker nie zostal zainstalowany! Sprawdz blad:', err)
-        });
-    }
-
-		</script>
-		<script>
-var rozmiar_x = window.innerWidth;
-var rozmiar_y = window.innerHeight;
-var pozycja_x = (rozmiar_x / 2) - 48;
-var pozycja_y = (rozmiar_y / 2) - 48;
-
-var x1 = 1;
-var y1 = 1;
-
-var obraz = document.createElement(`div`);
-obraz.className = `obraz`;
-
-function przesuwanie() {
-
-    /**
-     * Collision checking
-     */
-    if ((pozycja_x + 96) > rozmiar_x) {
-        x1 = -2;
-    } else if (pozycja_x < 0) {
-        x1 = 2;
-    }
-    if ((pozycja_y + 96) > rozmiar_y) {
-        y1 = -2;
-    } else if (pozycja_y < 0) {
-        y1 = 2;
-    }
-
-    pozycja_x = pozycja_x + x1;
-    pozycja_y = pozycja_y + y1;
-
-    obraz.style.left = pozycja_x + `px`;
-    obraz.style.top = pozycja_y + `px`;
-    document.body.appendChild(obraz);
-}
-
-window.onload = () => setInterval(przesuwanie, 1);
-
-window.addEventListener(`deviceorientation`, e => {
-    x = e.beta;
-    y = e.gamma;
-
-    if (x > 0) {
-        x1 = 2*x/4;
-    } else if (x < 0) {
-        x1 = -2;
-    }
-    if (y > 0) {
-        y1 = -2*y/4;
-    } else if (y < 0) {
-        y1 = 2;
-    }
-});
+		el = document.body;
+		el.addEventListener("touchstart",klik, false);
+		
+		
+		function klik(){
+		tekst ="";
+		tekst+=klik;
+		t_ar.value = tekst;
+		}
 		</script>
 	</body>
 </html>
