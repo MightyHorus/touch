@@ -24,6 +24,20 @@
 		el = document.body;
 		el.addEventListener("touchstart",klik, false);
 		
+		el.addEventListener("touchmove",przes,false);
+		el.addEventListener("touchend", odKlik,false);
+		
+		function przes(){
+		tekst = "";
+		tekst +="przes";
+		t_ar.value = tekst;
+		}
+		
+		function odKlik(){
+		tekst = "";
+		tekst += "odKlik";
+		t_ar.value=tekst;
+		}
 		
 		function klik(){
 		tekst ="";
